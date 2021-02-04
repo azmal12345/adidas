@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html, body {
+  scroll-behavior: smooth;
+}
+
+i, button, img {
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background-color: black;
+  color: black;
+  -webkit-box-shadow: 8px 8px 8px -6px black;
+          box-shadow: 8px 8px 8px -6px black;
+  padding: 10px 1rem;
+  z-index: 9999;
+}
+
+nav img {
+  width: 80px;
+}
+
+nav ul {
+  float: right;
+  list-style-type: none;
+  line-height: 70px;
+  clear: both;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.30rem;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 7px;
+  border-bottom: 1px solid white;
+}
+
+.bars {
+  float: right;
+  cursor: pointer;
+  margin-top: 15px;
+  display: none;
+  clear: both;
+}
+
+.bars .line {
+  width: 35px;
+  height: 3.10px;
+  background-color: white;
+  margin: 5px;
+  z-index: 9999;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  color: white;
+}
+
+.gallery video {
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gallery_child {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 45%;
+  text-align: center;
+}
+
+.gallery_child h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.gallery_child h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.gallery_child .btn {
+  width: 200px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 2px dashed #00ffff;
+  color: white;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.gallery_child .btn:hover {
+  background-color: #00ffff;
+  color: black;
+  border: none;
+}
+
+main {
+  background-color: #F9F9F9;
+}
+
+.gallery1 {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1rem;
+}
+
+.gallery1_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery1_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  margin: 10px;
+  position: relative;
+}
+
+.gallery1_text img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.imgIconList {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  display: none;
+}
+
+.imgIconList:hover {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  background-color: black;
+  color: black;
+}
+
+.imgIconList i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.30rem;
+  font-weight: 600;
+}
+
+.bodyImgPosition {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card_display {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1rem;
+}
+
+.cardDisplay_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardDisplay_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  background-color: white;
+  color: black;
+  -webkit-box-shadow: 5px 8px 8px -6px black;
+          box-shadow: 5px 8px 8px -6px black;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cardDisplay_text img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cardDisplay_text .hoverClickImg {
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.cardDisplay_text .hoverClickImg img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.cardDisplay_text .cardDisplay {
+  padding: 1rem 1rem;
+}
+
+.cardDisplay_text .cardDisplay h1 {
+  font-size: 1.50rem;
+  font-weight: bold;
+}
+
+.cardDisplay_text .cardDisplay p {
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.cardDisplay_text .cardDisplay .btn {
+  width: 70%;
+  height: 7vh;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 1rem;
+  background-color: black;
+  color: white;
+}
+
+.footer_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_text {
+  margin: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+
+.footer_text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer_text p {
+  font-size: 14px;
+}
+
+.footer_text .icon_logo i {
+  margin: 20px 10px 20px 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 10%;
+  background-color: white;
+  text-align: center;
+  line-height: 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.footer_text .icon_logo i:hover {
+  background-color: white;
+  color: black;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px rgba(250, 250, 249, 0.5), 0 0 300px rgba(245, 244, 239, 0.5);
+          box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px rgba(250, 250, 249, 0.5), 0 0 300px rgba(245, 244, 239, 0.5);
+}
+
+.footer_text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 50px;
+}
+
+.footer_text span i {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.footer_text span h2 {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.footer_text form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer_text input, .footer_text textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+  border: 2px solid black;
+}
+
+.footer_text .submit {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.copyRight {
+  margin-right: 120px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.scrollButton {
+  position: fixed;
+  right: 26.50px;
+  bottom: 35px;
+  clear: both;
+  z-index: 65;
+  text-decoration: none;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.scrollButton i {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #00ffff;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 43px;
+}
+
+.scrollButton.scrollButton1 {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery_child {
+    top: 15%;
+  }
+  .gallery_child h1 {
+    font-size: 3.50rem;
+  }
+  .cardDisplay_text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gallery_child h1 {
+    font-size: 2.50rem;
+  }
+  .gallery_child .btn {
+    width: 135px;
+  }
+}
+/*# sourceMappingURL=index2.css.map */

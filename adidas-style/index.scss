@@ -1,0 +1,958 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$red : red;
+$green : green;
+$orange : orange;
+$yellow : yellow;
+$blue : blue;
+$purple : purple;
+$lime : lime;
+$skyblue : skyblue;
+$black : black;
+$white : white;
+$pink : #ff0066;
+
+// boxshadow 
+@mixin boxShadow($shadow1,$shadow2,$shadow3,$shadow4,$color) {
+    box-shadow:  $shadow1 $shadow2 $shadow3 $shadow4 $color;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+i,button,img{
+    cursor: pointer;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+// ******************************* navbar ****************************************
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: black;
+    color: rgb(0, 0, 0);
+    @include boxShadow(8px, 8px, 8px, -6px, $black);
+    padding: 10px 1rem;
+    z-index: 9999;
+
+    img{
+        width: 80px;
+    }
+
+    ul{
+        float: right;
+        list-style-type: none;
+        line-height: 70px;
+        clear: both;
+
+        li{
+            display: inline-block;
+            margin-right: 50px;
+            position: relative;
+
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 1.30rem;
+                font-weight: 500;
+
+                &:hover{
+                    text-decoration: none;
+                    color: $white;
+                    padding-bottom: 7px;
+                    border-bottom: 1px solid $white;
+                }
+            }
+        }
+    }
+}
+
+.bars{
+    float: right;
+    cursor: pointer;
+    margin-top: 15px;
+    display: none;
+    clear: both;
+
+    .line{
+        width: 35px;
+        height: 3.10px;
+        background-color: $white;
+        margin: 5px;
+        z-index: 9999;
+    }
+}
+
+
+// *********************************** header *********************************
+
+
+.header{
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background:black;
+    color: $white;
+    padding-bottom: 50px;
+
+    .header_child{
+        transform-style: preserve-3d;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .header_container{
+            flex: 1 1 200px;
+
+            h1{
+                font-size: 3rem;
+                font-weight: bold;
+                letter-spacing: 7.50px;
+                margin-top: 90px;
+            }
+
+            h2{
+                font-size: 2.20rem;
+                word-spacing: 5px;
+                margin-top: 3px;
+
+                span{
+                    color: aqua;
+                    font-weight: bold;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 600px;
+                margin-top: 5px;
+            }
+
+            .btn{
+                width: 140px;
+                height: 35px;
+                background-color: transparent;
+                color: $white;
+                border: none;
+                outline: none;
+                border: 1px solid $white;
+                border-radius: 5px;
+                margin-top: 10px;
+                transform:  rotateY(-15deg);
+                transition: 0.5s ease;
+
+                &:hover{
+                    background-color: $white;
+                    color: $black;
+                    transform: rotateY(15deg);
+                }
+            }
+        }
+    }
+}
+
+.imgHeader{
+    position: relative;
+    z-index: 2;
+    
+
+    img{
+        transform: rotate(-10deg);
+    }
+
+    &::before{
+        width: 190px;
+        height: 190px;
+        border-radius: 100%;
+        position: absolute;
+        content: "";
+        top: 85%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background-color: aqua;
+        z-index: -1;
+       box-shadow:  -1px -8px 500px -31px aqua;
+    }
+
+    &::after{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        top: 17.50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        background-color: aqua;
+        transform: rotate(-42deg);
+        z-index: -1;
+        @include boxShadow(-1px, -8px, 500px, -13px, aqua);
+    }
+}
+
+.conainer_color{
+    position: absolute;
+    top: 25%;
+    right: 2.50%;
+    transform: translate(-50%, -0%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    .Color{
+        width: 50px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-radius: 5px;
+        margin: 5px;
+
+        img{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+// *********************************** main *************************************
+
+main{
+    width: 100%;
+    max-width: 100%;
+}
+
+.first_container{
+    margin-top: -80px;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+
+    .first_child{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .first_text{
+            flex: 1 1 210px;
+            background-color: rgb(255, 255, 255);
+            margin: 1rem;
+            padding: 1rem;
+            position: relative;
+            z-index: 3;
+            @include boxShadow(5px, 8px, 8px, -6px, $black);
+            border-radius: 3px;
+            transition: all 0.5s ease;
+
+            &:hover{
+                background-color: $black;
+                color: $white;
+                transition: all 0.5s ease;
+                transform: rotate(5deg);
+                transform-origin: left;
+            }
+
+            &::before{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                position: absolute;
+                top: 24%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: "";
+                background-color: #ff0066;
+                z-index: -1;
+            }
+
+            i{
+                font-size: 2rem;
+                font-weight: 600;
+                color: rgb(255, 255, 255);
+                margin-top: 20px;
+            }
+
+            h1{
+                margin-top: 30px;
+                font-size: 1.50rem;
+                font-weight: 600;
+            }
+
+            p{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// *********************************** card **************************************
+.adidasList{
+    font-size: 1.50rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    &::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 310px;
+        height: 80px;
+        background-color: #00FFFF;
+        border-top-left-radius: 75px;
+        border-bottom-right-radius: 65px;
+        z-index: -1;
+    }
+}
+
+.card{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+
+    .card_child{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .card_text{
+            flex: 1 1 150px;
+            margin: 10px;
+            background-color: $white;
+            color: $black;
+            border-radius: 5px;
+            box-shadow: -2px 3px 8px -0.5px $black;
+            padding: 10px 10px;
+
+            img{
+                width: 200px;
+                height: 121px;
+                padding: 10px;
+            }
+
+            h1{
+                font-size: 1.10rem;
+                font-weight: 600;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            h4{
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .rating_list{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .star i{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: orange;
+                    margin: 0 0 0 10px;
+                }
+
+                span h1{
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+
+                .button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        button{
+            width: 120px;
+            max-width: 120px;
+            height: 33px;
+            font-size: 14px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid $black;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: $black;
+                color: $white;
+            }
+        }
+        // end 
+    }
+}
+
+// *********************************** shoes with man ***************************************
+.offerKnow{
+    margin-top: 75px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 85px;
+        border-top-left-radius: 75px;
+        border-bottom-right-radius: 65px;
+        content: "";
+        background-color: #00FFFF;
+        z-index: -1;
+    }
+}
+.shoes_with_man{
+    margin: 7rem 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem 3rem;
+    background-color: rgb(255,255,255);
+    @include boxShadow(5px, 2px, 12px, 0.50px, $black);
+    // color: rgb(255,255,255);
+
+
+    .logo_text{
+        width: 50px;
+        height: 50px;
+        background-color: #ff0066;
+        color: white;
+        border-radius: 100%;
+        line-height: 50px;
+
+        h1{
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+}
+
+.shoes_with_man_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoes_with_man_text{
+    flex: 1 1 200px;
+
+    img{
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    h4{
+        font-size: 3.50rem;
+        font-weight: 400;
+
+        span{
+            color: #ff0066;
+            font-weight: bold;
+        }
+    }
+
+    p{
+        font-size: 14px;
+        margin: 12px 0;
+    }
+
+    .btn{
+        width: 200px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid $black;
+        background-color: transparent;
+        border-radius: 3px;
+        transition: 0.3s ease;
+
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    // end 
+}
+
+// ***************************** running start ***********************************
+
+.running_shoes{
+    margin: 10rem 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 5rem 3rem;
+    background-color: $white;
+    box-shadow: -2px 3px 8px -0.5px $black;
+}
+
+.raunning_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        content: "";
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-color: #0075FF;
+        z-index: -1;
+    }
+}
+
+.running_text{
+    flex: 1 1 200px;
+
+    img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p{
+        font-size: 14px;
+        margin: 1rem 0;
+    }
+
+    label span{
+        font-size: 1.10rem;
+        font-weight: bold;
+    }
+
+    label progress{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+// ******************************* latest shoes *********************************
+.latest_shoes{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+}
+
+.latest_shoes_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        top: 8%;
+        left: 3%;
+        content: "25th JUN";
+        width: 60px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: #00FFFF;
+        text-align: center;
+        line-height: 30px;
+        color: $black;
+    }
+}
+
+.lastest_shoes_text{
+    flex: 1 1 200px;
+    margin: 10px;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        top: 8%;
+        left: 3%;
+        content: "30th JUN";
+        width: 60px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: #00FFFF;
+        text-align: center;
+        line-height: 30px;
+        color: $black;
+    }
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 5px;
+        transition: 0.5s ease;
+
+        &:hover{
+            transform: translateY(-10px);
+            transition: 0.5s ease;
+        }
+    }
+}
+
+
+// ******************************* demo perviouse **********************************
+
+.demo_pervious{
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: 2rem 3rem;
+    position: relative;
+    display: none;
+    position: fixed;
+    background-color: $black;
+    color: $white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    .fa-times{
+        float: right;
+        clear: both;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.demo_pervious_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo_pervious_text{
+    flex: 1 1 200px;
+
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: relative;
+        left: 10px;
+    }
+
+    p{
+        font-size: 14px;
+        margin: 1rem 0;
+        position: relative;
+        left: 10px;
+    }
+
+    .card_icon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add_card{
+        width: 50%;
+        max-width: 50%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 2px solid $white;
+        background-color: $white;
+        color: $black;
+        cursor: pointer;
+    }
+
+    .btn{
+        width: 40%;
+        padding: 10px 0;
+        border: 2px solid $white;
+        border-radius: 5px;
+        background-color: $white;
+        color: $black;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    // img peroviues 
+    .img_pervious{
+        width: 100%;
+        max-width: 100%;
+
+        img{
+            width: 40px;
+            height: 35px;
+            border: 1px solid $white;
+            margin: 1rem 1px;
+            padding: 2px;
+            z-index: 5;
+        }
+    }
+    // rating 
+    .rating{
+        width: 100%;
+        max-width: 100%;
+
+        i{
+            margin-left: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: $orange;
+        }
+    }
+
+
+}
+
+// ******************************* javascript image ***************************************
+.bodyColor{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 90%;
+    height: 90vh;
+    background-color: $white;
+    box-shadow: -2px 3px 8px -0.5px $black;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 1rem;
+    z-index: 99999;
+
+    .clickButtonTime{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        font-size: 1.50rem;
+        font-weight: bold;
+        float: right;
+        clear: both;
+    }
+}
+
+.displayFelx{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.javascriptImg{
+    margin-top: -60px;
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 50px;
+        height: 45px;
+        border: 1px solid silver;
+        margin: 5px;
+        padding: 5px;
+        z-index: 55;
+    }
+}
+
+.javascriptOneImg{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+        width: 100%;
+        height: 300px;
+        max-width: 100%;
+    }
+}
+
+// ****************************** footer *******************************
+.footer{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+    // background: linear-gradient(-3deg, $black 80%, rgba(255,255,255,0) 20%);
+    background-color: $black;
+    color: $white;
+}
+
+.footer_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer_text{
+    margin: 10px;
+    flex: 1 1 200px;
+
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .icon_logo i{
+        margin: 20px 10px 20px 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 10%;
+        background-color: $white;
+        text-align: center;
+        line-height: 35px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $black;
+        transition: 0.5s ease;
+
+        &:hover{
+            background-color: $white;
+            color: $black;
+            transform: translateY(-10px);
+            transition: 0.5s ease;
+            box-shadow: 0 0 5px $white, 0 0 25px $white, 0 0 50px rgba(250, 250, 249, 0.5), 0 0 300px rgba(245, 244, 239, 0.5);
+        }
+    }
+
+    span{
+        display: flex;
+        line-height: 50px;
+
+        i{
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        h2{
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+    }
+
+    form label{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    input, textarea{
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        resize: none;
+        border: none;
+        outline: none;
+        border: 2px solid $black;
+    }
+
+    .submit{
+        background-color: $white;
+        color: $black;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+}
+
+.copyRight{
+    margin-right: 120px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// *************************** scroll ********************************
+.scrollButton{
+    position: fixed;
+    right: 26.50px;
+    bottom: 35px;
+    // margin-top: -200px;
+    clear: both;
+    z-index: 65;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    opacity: 0;
+
+    i{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: #00ffff;
+        color: $white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 43px;
+    }
+}
+
+.scrollButton.scrollButton1{
+    pointer-events: auto;
+    opacity: 1;
+}
